@@ -17,6 +17,8 @@ export default function InteractiveMap({ imageSrc, altText }: InteractiveMapProp
                 minScale={0.5}
                 maxScale={5}
                 centerOnInit
+                centerZoomedOut={false}
+                limitToBounds={false}
                 wheel={{ step: 0.1 }}
                 doubleClick={{ mode: "zoomIn" }}
             >
