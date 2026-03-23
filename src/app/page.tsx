@@ -18,7 +18,7 @@ export default function Home() {
             <Link
               key={zone.slug}
               href={`/zone/${zone.slug}`}
-              className="flex items-center justify-between p-4 bg-white dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 dark:border-gray-600 group hover:-translate-y-1 relative overflow-hidden"
+              className="flex items-center justify-between p-4 bg-white dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 dark:border-gray-600 group hover:-translate-y-1 active:scale-95 relative overflow-hidden"
               style={{ borderLeftColor: zone.color, borderLeftWidth: '4px' }}
             >
               <div
