@@ -6,28 +6,29 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 interface InteractiveMapProps {
     imageSrc: string;
     altText: string;
-    color: string;
+    color: string; // Color prop kept if we want to use it for an overlay accent later
 }
 
-export default function InteractiveMap({ imageSrc, altText, color }: InteractiveMapProps) {
+export default function InteractiveMap({ imageSrc, altText }: InteractiveMapProps) {
     return (
-        <div className="w-full aspect-square md:aspect-video rounded-xl mb-6 flex items-center justify-center overflow-hidden border border-gray-100 dark:border-gray-700 shadow-sm relative group bg-white dark:bg-gray-800">
+        <div className="absolute inset-0 w-full h-full overflow-hidden bg-gray-50 dark:bg-gray-950 touch-none">
             <TransformWrapper
                 initialScale={1}
                 minScale={0.5}
-                maxScale={4}
+                maxScale={5}
                 centerOnInit
                 wheel={{ step: 0.1 }}
+                doubleClick={{ mode: "zoomIn" }}
             >
-                <TransformComponent wrapperClass="w-full h-full" contentClass="w-full h-full">
-                    <div className="relative w-full h-full flex items-center justify-center min-h-[300px] md:min-h-full">
+                <TransformComponent wrapperClass="w-full h-full" contentClass="w-full h-full flex items-center justify-center">
+                    <div className="relative w-full h-full flex items-center justify-center min-h-[500px] min-w-[500px]">
                         <Image
                             src={imageSrc}
                             alt={altText}
                             fill
-                            className="object-contain"
+                            className="object-contain pointer-events-none"
                             priority
-                            sizes="(max-width: 768px) 100vw, 800px"
+                            sizes="100vw"
                         />
                     </div>
                 </TransformComponent>
