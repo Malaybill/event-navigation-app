@@ -19,8 +19,13 @@ export default function InteractiveMap({ imageSrc, altText }: InteractiveMapProp
                 centerOnInit
                 centerZoomedOut={true}
                 limitToBounds={false}
-                wheel={{ step: 0.1 }}
-                doubleClick={{ mode: "zoomIn" }}
+                smooth={true}
+                wheel={{ step: 0.25 }}
+                doubleClick={{ mode: "zoomIn", step: 1.0, animationTime: 120 }}
+                panning={{ velocityDisabled: false, lockAxisX: false, lockAxisY: false }}
+                alignmentAnimation={{ disabled: false, sizeX: 0.1, animationTime: 180, animationType: "easeOut" }}
+                velocityAnimation={{ disabled: false, sensitivity: 1, animationTime: 180, animationType: "easeOut" }}
+                zoomAnimation={{ disabled: false, animationTime: 120, animationType: "easeOut" }}
             >
                 <TransformComponent
                     wrapperClass="!w-screen !h-screen"
