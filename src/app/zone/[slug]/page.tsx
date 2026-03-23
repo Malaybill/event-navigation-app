@@ -46,15 +46,15 @@ export default async function ZonePage({ params }: { params: Promise<{ slug: str
                 </div>
 
                 {/* Bottom Floating Pill for Zone Name */}
-                <div className="flex justify-center w-full mb-6 pb-safe">
-                    <div className="pointer-events-auto bg-white/85 dark:bg-gray-800/85 backdrop-blur-xl px-6 py-3.5 rounded-full shadow-2xl border border-white/40 dark:border-gray-600 flex items-center gap-3 active:scale-95 transition-transform">
+                <div className="flex justify-center w-full mb-6 pb-safe pointer-events-none">
+                    <div className="bg-white/50 dark:bg-gray-800/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 dark:border-gray-700 flex items-center gap-2 shadow-sm">
                         <div
-                            className="w-3 h-3 rounded-full shadow-inner border border-black/10 dark:border-white/10"
+                            className="w-2.5 h-2.5 rounded-full opacity-80"
                             style={{ backgroundColor: zone.color }}
                         />
-                        <h1 className="text-lg font-bold text-gray-900 dark:text-white tracking-tight">
+                        <span className="text-sm font-medium text-gray-800 dark:text-gray-200 tracking-wide">
                             {zone.name}
-                        </h1>
+                        </span>
                     </div>
                 </div>
 
