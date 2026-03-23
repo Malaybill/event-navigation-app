@@ -23,7 +23,7 @@ export default function InteractiveMap({ imageSrc, altText }: InteractiveMapProp
                 doubleClick={{ mode: "zoomIn" }}
             >
                 <TransformComponent wrapperClass="w-full h-full" contentClass="w-full h-full flex items-center justify-center">
-                    <div className="relative w-full h-full flex items-center justify-center min-h-[500px] min-w-[500px]">
+                    <div className="relative w-full h-full flex items-center justify-center">
                         <Image
                             src={imageSrc}
                             alt={altText}
