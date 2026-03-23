@@ -11,7 +11,20 @@ interface InteractiveMapProps {
 
 export default function InteractiveMap({ imageSrc, altText }: InteractiveMapProps) {
     return (
-        <div className="absolute inset-0 w-full h-full overflow-hidden bg-gray-50 dark:bg-gray-950 touch-none">
+        <div
+            className="absolute inset-0 w-full h-full overflow-hidden bg-gray-50 dark:bg-gray-950 touch-none"
+            style={{
+                backgroundImage: 'radial-gradient(var(--tw-gradient-stops))', // Fallback
+            }}
+        >
+            {/* Background Grid Pattern */}
+            <div
+                className="absolute inset-0 opacity-20 dark:opacity-10"
+                style={{
+                    backgroundImage: 'radial-gradient(#6b7280 1px, transparent 1px)',
+                    backgroundSize: '24px 24px'
+                }}
+            />
             <TransformWrapper
                 initialScale={1}
                 minScale={0.5}
