@@ -36,16 +36,14 @@ export default function InteractiveMap({ imageSrc, altText }: InteractiveMapProp
                 doubleClick={{ mode: "zoomIn" }}
             >
                 <TransformComponent wrapperClass="w-full h-full" contentClass="w-full h-full flex items-center justify-center">
-                    <div className="relative w-full h-full flex items-center justify-center">
-                        <Image
-                            src={imageSrc}
-                            alt={altText}
-                            fill
-                            className="object-contain pointer-events-none"
-                            priority
-                            sizes="100vw"
-                        />
-                    </div>
+                    <Image
+                        src={imageSrc}
+                        alt={altText}
+                        width={1200}
+                        height={800}
+                        className="w-[90vw] md:w-[800px] h-auto object-contain pointer-events-none drop-shadow-2xl bg-white/5"
+                        priority
+                    />
                 </TransformComponent>
             </TransformWrapper>
         </div>
