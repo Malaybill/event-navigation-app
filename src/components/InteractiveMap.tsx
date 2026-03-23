@@ -41,7 +41,7 @@ export default function InteractiveMap({ imageSrc, altText }: InteractiveMapProp
                         alt={altText}
                         width={1200}
                         height={800}
-                        className="w-[90vw] md:w-[800px] h-auto object-contain pointer-events-none drop-shadow-2xl bg-white/5"
+                        className="w-[90vw] md:w-[800px] h-auto object-contain pointer-events-none opacity-90"
                         priority
                     />
                 </TransformComponent>
